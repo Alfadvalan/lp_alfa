@@ -137,6 +137,10 @@ function App() {
     });
   };
 
+  const onClick = () => {
+    navigate('./TermsScreen')
+  };
+
   return (
     <div className='overflow-x-hidden w-full bg-blue flex flex-col font-montserrat items-center'>
       <header className='bg-white h-10 w-full flex flex-row items-center justify-evenly lg:justify-around md:h-16 lg:h-20'>
@@ -203,8 +207,9 @@ function App() {
                     </div>
                   )}
                       </div>*/}
-                <button className='bg-red-700 rounded-lg text-white uppercase font-extrabold p-3 my-0 text-xs hover:animate-spin shadow-bs1 hover:shadow-red-700/80 shadow-red-700/50 hover:scale-[1.03] md:p-5 md:text-xl md:mt-10 lg:mb-10 lg:my-2 lg:mx-12 lg:text-base'>quero proteger meu veículo</button>
+                <button className='bg-red-700 rounded-lg text-white uppercase font-extrabold p-3 text-xs my-3 hover:animate-spin shadow-bs1 hover:shadow-red-700/80 shadow-red-700/50 hover:scale-[1.03] md:p-5 md:text-xl md:mt-10 lg:mb-5 lg:my-0 lg:mx-12 lg:text-base'>quero proteger meu veículo</button>
               </form>
+              <p className='text-white text-center px-9 md:px-20 lg:px-10 md:text-xs text-[8px]'>Ao preencher o formulário, concordo em receber comunicação e estou de acordo com os <a onClick={onClick} className='cursor-pointer underline font-semibold'>termos de uso</a>.</p>
             </div>
           </div>
         </div>
