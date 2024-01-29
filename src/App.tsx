@@ -142,10 +142,10 @@ function App() {
       <header className='bg-white h-10 w-full flex flex-row items-center justify-evenly lg:justify-around md:h-16 lg:h-20'>
 
           <img src={logo_color} alt='logo' className='w-32 md:w-48 lg:w-60' />
-          <button className='bg-green-500 py-1 px-2 text-sm rounded-lg shadow-bs1 text-white font-bold flex gap-2 items-center justify-around md:text-lg lg:py-3 lg:px-6 md:py-2 md:px-3'>
+          <a className='bg-green-500 py-1 px-2 text-sm rounded-lg shadow-bs1 text-white font-bold flex gap-2 items-center justify-around md:text-lg lg:py-3 lg:px-6 md:py-2 md:px-3 cursor-pointer' href='https://bit.ly/3Sk88LS'>
             <FaWhatsapp className='lg:w-6 lg:h-6 w-3 h-3 md:w-5 md:h-5'/>
             Fale conosco
-          </button>
+          </a>
 
       </header>
       <section className='h-full w-full bg-bg-sm md:bg-bg-mid lg:bg-bg-image bg-cover  '>
