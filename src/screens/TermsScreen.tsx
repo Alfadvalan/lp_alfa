@@ -96,7 +96,7 @@ const TermsScreen = () => {
                         21. Estes Termos e Condições, incluindo quaisquer avisos legais e isenções de responsabilidade neste site, constituem o acordo completo entre o site e você em relação ao uso deste site. Em última análise, este Acordo substitui todos os acordos e entendimentos anteriores relativos ao mesmo.
                     </p>
                     <p>
-                        22. Qualquer dúvida, entre em contato por meio do endereço de e-mail: axleads9791@gmail.com.
+                        22. Qualquer dúvida, entre em contato por meio do endereço de e-mail: <a className='underline text-red-600 cursor-pointer' href='mailto:axleads9791@gmail.com'>axleads9791@gmail.com</a>.
                     </p>
                 </div>
             </section>
