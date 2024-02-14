@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import InputMask from 'react-input-mask';
 import { useNavigate } from 'react-router-dom';
 import { format } from 'date-fns'; 
@@ -22,6 +22,22 @@ import { FaWhatsapp } from "react-icons/fa";
 
 function App() {
   const navigate = useNavigate();
+
+  const HelpMessage = () => {
+    const [isVisible, setIsVisible] = useState(true);
+
+    useEffect(() => {
+      const intervalId = setInterval(() => {
+        setIsVisible((prevVisibility) => !prevVisibility);
+      }, 5000);
+
+      return () => clearInterval(intervalId);
+    }, []);
+
+    return (
+      <p className={`bg-white fixed bottom-[22vw] text-center right-5 p-2 rounded-lg text-[3.5vw] ${isVisible ? '' : 'hidden'}`}>Converse com um consultor</p>
+    );
+  };
 
   // const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   // const [isDropdownOpen, setDropdownOpen] = useState(false);
@@ -122,7 +138,7 @@ function App() {
     };
   
     return (
-      <div className='absolute left-1/2 -bottom-8 lg:-bottom-16'>
+      <div className='absolute left-1/2 bottom-8 lg:-bottom-16'>
         <button onClick={scrollToBottom} className=''>
           <img src={Component_7} alt="Custom Icon" className="h-8 md:h-12 "></img>
         </button>
@@ -146,7 +162,7 @@ function App() {
       <header className='bg-white h-10 w-full flex flex-row items-center justify-evenly lg:justify-around md:h-16 lg:h-20'>
 
           <img src={logo_color} alt='logo' className='w-32 md:w-48 lg:w-60 cursor-pointer' />
-          <a className='bg-green-500 py-1 px-2 text-sm rounded-lg shadow-bs1 text-white font-bold flex gap-2 items-center justify-around md:text-lg lg:py-3 lg:px-6 md:py-2 md:px-3 cursor-pointer' href='https://bit.ly/3Sk88LS'>
+          <a className='bg-green-500 py-1 px-2 text-sm rounded-lg shadow-bs1 text-white font-bold md:flex gap-2 items-center justify-around md:text-lg lg:py-3 lg:px-6 md:py-2 md:px-3 cursor-pointer hidden' href='https://bit.ly/3Sk88LS'>
             <FaWhatsapp className='lg:w-6 lg:h-6 w-3 h-3 md:w-5 md:h-5'/>
             Fale conosco
           </a>
@@ -265,6 +281,12 @@ function App() {
           <button onClick={ScrollToTop} className='bg-red-700 rounded-lg text-white uppercase font-extrabold p-3 m-5 my-2 text-xs hover:animate-spin shadow-bs1 hover:shadow-red-700/80 shadow-red-700/50 hover:scale-[1.03] md:p-8 md:text-2xl md:mb-10'>quero proteger meu veículo</button>
         </div>
       </section>
+      <div className='flex'>
+        <HelpMessage />
+        <a className='bg-green-500 py-2 px-2 rounded-full shadow-bs1 text-white font-bold md:hidden gap-2 cursor-pointer fixed bottom-5 right-5' href='https://bit.ly/3Sk88LS'>
+          <FaWhatsapp className='w-[5vh] h-[5vh]'/>
+        </a>
+      </div>
       <footer className='flex items-center justify-around w-full h-10 bg-[#353535] md:h-20'>
         <div className='flex w-full items-center justify-between'>
           <div className='flex justify-center w-full'>
