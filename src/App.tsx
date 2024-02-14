@@ -35,7 +35,7 @@ function App() {
     }, []);
 
     return (
-      <p className={`bg-white fixed bottom-[22vw] text-center right-5 p-2 rounded-lg text-[3.5vw] ${isVisible ? '' : 'hidden'}`}>Converse com um consultor</p>
+      <p className={`bg-white fixed bottom-[22vw] text-center right-5 p-2 rounded-lg text-[3.5vw] md:hidden ${isVisible ? '' : 'hidden'}`}>Converse com um consultor</p>
     );
   };
 
